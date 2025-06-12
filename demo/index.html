@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I-Lish</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Roboto:wght@100;400;700&family=Rubik+Gemstones&family=Luckiest+Guy&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --primary: #b6d440;
+     
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+      background: #5efaff;
+      min-height: 100vh;
+    }
+
+    #header {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #header .logo {
+      color: orange;
+      font-weight: 700;
+      font-size: 2.5em;
+      text-decoration: none;
+      font-family: 'Luckiest Guy', cursive;
+    }
+
+    #header ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #header ul li {
+      list-style: none;
+      margin-left: 20px;
+    }
+
+    #header ul li a {
+      text-decoration: none;
+      padding: 6px 15px;
+      color: orange;
+      border-radius: 20px;
+    }
+
+    #header ul li a:hover,
+    #header ul li a.active {
+      background: orange;
+      color: #fff;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, var(--primary), transparent);
+      z-index: 10;
+    }
+
+    section img {
+      position: absolute;
+      pointer-events: none;
+      transition: transform 0.3s ease-out;
+      will-change: transform;
+    }
+
+    #cloud1 {
+      width: 40%;
+      top: 10%;
+      left: 0%;
+      z-index: 1;
+    }
+
+    #cloud2 {
+      width: 40%;
+      top: 10%;
+      right: 0%;
+      z-index: 1;
+    }
+
+    #forest {
+      width: 1200px;
+      height: 700px;
+      bottom: 0;
+      left: 150px;
+      z-index: 1;
+    }
+
+    #dino {
+      
+      width: 300px;
+      bottom: 30%;
+      left: 0%;
+      z-index: 6;
+    }
+
+    #fore {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0px;
+      z-index: 1;
+    }
+
+    #text {
+      position: absolute;
+      font-size: 8vw;
+      text-align: center;
+      line-height: 0.55em;
+      top: 170px;
+      left: 530px;
+      z-index: 0;
+      color: #ff9d00;
+      will-change: transform;
+      font-style: oblique;
+      font-family: 'Rubik Gemstones', cursive;
+      text-shadow: 2px 2px 8px #00000055;
+    }
+
+    #text span {
+      font-size: 0.25em;
+      letter-spacing: 2px;
+      font-weight: 400;
+    }
+
+    #btn {
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 35px;
+      background: #fff;
+      color: var(--primary);
+      font-size: 1.2em;
+      font-weight: 500;
+      letter-spacing: 2px;
+      border-radius: 40px;
+      transform: translateY(100px);
+      z-index: 6;
+      will-change: transform;
+      margin-left: 500px;
+      margin-bottom: 100px;
+    }
+
+    .sec {
+      position: relative;
+      padding: 100px;
+      height: 700px;
+      background: var(--primary);
+      z-index: 4;
+    }
+
+    .sec h2 {
+      position: absolute;
+      font-size: 3.5em;
+      height: 500px;
+      width: 85%;
+      color: #fff;
+      margin-bottom: 10px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .sec p {
+      position: relative;
+      font-size: 1em;
+      width: 85%;
+      color: #fff;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 30px;
+      margin-left: 120px;
+      z-index: 3;
+    }
+
+    #courses {
+       background: var(--primary);
+      padding: 100px 50px;
+      text-align: center;
+     
+    }
+
+    #courses h2 {
+      font-size: 3em;
+      margin-bottom: 50px;
+      color: #ff8c00;
+      font-family: 'Rubik Gemstones', cursive;
+    }
+
+    .course-cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    /* #about, #contact {
+      padding: 100px 50px;
+      background: #b6d440;
+      text-align: center;
+    }
+
+    #about h2, #contact h2 {
+      font-size: 3em;
+       color: #ff8c00;
+      font-family: 'Rubik Gemstones', cursive;
+      margin-bottom: 30px;
+    }
+
+    #about p, #contact p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1em;
+      color: #444;
+    } */
+  </style>
+</head>
+<body>
+  <header id="header">
+    <a href="#" class="logo">I-Lish</a>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <section>
+    <h2 id="text"><span>join now on</span><br>I-LISH</h2>
+    <img src="dino/clouds.png" id="cloud1" />
+    <img src="dino/clouds.png" id="cloud2" />
+    <img src="dino/jungle.png" id="forest" />
+    <img src="dino/flying dino_tracer.png" id="dino" />
+    <img src="dino/foreground.png" id="fore" />
+  </section>
+
+  <div class="sec">
+    <h2>Lorem ipsum dolor sit.
+    </h2><br><br><br><br><br>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit viverra libero... Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste magni quasi id? Nobis, nulla maxime facilis eos modi blanditiis ipsam aliquid deserunt at non officia quae beatae laboriosam accusamus quod, reiciendis, doloremque molestiae. Aliquid quisquam velit a excepturi unde repellendus ipsum quas possimus adipisci commodi sapiente nobis corrupti autem nihil, molestiae nemo temporibus in veritatis dolores vero sunt. Ducimus illo saepe voluptatibus hic soluta nobis molestiae obcaecati similique dicta. Ut id pariatur officiis obcaecati. Voluptas alias tempore error iste hic vero architecto earum accusantium excepturi assumenda quia autem accusamus sint at, nihil totam praesentium aliquam provident quas non iusto maiores odit repellat optio. Eum pariatur minima assumenda ab amet excepturi nulla ea aliquam accusantium libero. Laboriosam quidem exercitationem maxime optio, suscipit ex deserunt nesciunt vero ducimus expedita quis minima magnam necessitatibus fuga numquam harum neque quas porro et reiciendis quaerat rerum temporibus! Quasi explicabo nulla et distinctio vitae quisquam nihil id laudantium tempora numquam error expedita asperiores tenetur, ab dolore commodi rem obcaecati reprehenderit delectus labore perferendis. Molestiae sapiente, culpa quae facere minus veniam enim temporibus praesentium at totam iusto nesciunt harum nemo voluptatum non dolorum? Dolorum quas blanditiis iure libero provident cupiditate dolore voluptate. Aut doloremque a atque placeat quaerat. Accusamus laudantium odit quas, ipsa quae beatae voluptatibus quam impedit, maiores cupiditate quos harum aspernatur vitae excepturi? Ipsum sunt dolores iure quasi eum ipsa in quam amet. Nam et labore similique vero ea quas quia, doloribus, suscipit totam, ex sed quisquam asperiores possimus. Ipsam maiores voluptate quo? Totam, odit?
+    </p>
+  </div>
+
+  <!-- Courses Section -->
+  <section id="courses">
+    <h2>Our Popular Courses</h2>
+    <div class="course-cards">
+      <div class="card">
+        <h3>Spoken English</h3>
+        <p>Master English speaking skills through interactive activities and daily conversation practice.</p>
+      </div>
+      <div class="card">
+        <h3>Phonics & Reading</h3>
+        <p>Learn to read and pronounce clearly using fun phonics techniques and engaging story sessions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <!-- <section id="about">
+    <h2>About I-Lish</h2>
+    <p>I-Lish is a fun and interactive learning platform designed especially for kids to build confidence in speaking English and reading using imaginative, creative techniques and playful storytelling.</p>
+  </section> -->
+
+  <!-- Contact Section -->
+  <!-- <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to join our dino family? Reach out at <strong>hello@ilishkids.com</strong> or call us at <strong>+91 98765 43210</strong>.</p>
+  </section> -->
+
+  <script>
+    "use strict";
+    const text = document.getElementById('text');
+    const cloud1 = document.getElementById('cloud1');
+    const cloud2 = document.getElementById('cloud2');
+    const dino = document.getElementById('dino');
+    const btn = document.getElementById('btn');
+    const forest = document.getElementById('forest');
+    const fore = document.getElementById('fore');
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+      let value = window.scrollY;
+
+      text.style.transform = `translateY(${value * -1}px)`;
+      cloud1.style.transform = `translateY(${value * -0.5}px)`;
+      cloud2.style.transform = `translateY(${value * -0.6}px)`;
+      dino.style.transform = `translateX(${value * 3.5}px)`;
+      forest.style.transform = `translateY(${value * 6}px)`;
+      fore.style.transform = `translateY(${value * 2}px)`;
+      btn && (btn.style.transform = `translateY(${value * 1.1}px)`);
+      header.style.transform = `translateY(${value * 0.2}px)`;
+    });
+  </script>
+</body>
+</html>
