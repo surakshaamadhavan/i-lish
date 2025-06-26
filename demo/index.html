@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I-Lish</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Roboto:wght@100;400;700&family=Rubik+Gemstones&family=Luckiest+Guy&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Roboto:wght@100;400;700&family=Rubik+Gemstones&family=Luckiest+Guy&display=swap"
+    rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+
+
 
   <style>
     :root {
       --primary: #b6d440;
-     
+
     }
 
     * {
@@ -124,7 +131,7 @@
     }
 
     #dino {
-      
+
       width: 300px;
       bottom: 30%;
       left: 0%;
@@ -216,10 +223,10 @@
     }
 
     #courses {
-       background: var(--primary);
+      background: var(--primary);
       padding: 100px 50px;
       text-align: center;
-     
+
     }
 
     #courses h2 {
@@ -260,6 +267,76 @@
       color: #555;
       font-size: 0.95em;
     }
+    
+  /* Pulse Glow */
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 0 rgba(242, 72, 34, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(242, 72, 34, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 rgba(242, 72, 34, 0.2);
+    }
+  }
+
+  /* Floating Image */
+  @keyframes floatIcon {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+  }
+
+  /* Slide-in Animation */
+  .slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+  }
+
+  .slide-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* WhatsApp Button Hover */
+  .contact-btn {
+    display: inline-block;
+    margin-top: 35px;
+    background-color: #f24822;
+    color: white;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-btn:hover {
+    transform: scale(1.05);
+    background: #d53f1a;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Apply animations */
+  .contact-box {
+    animation: pulseGlow 3s infinite ease-in-out;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-box img {
+    animation: floatIcon 3s ease-in-out infinite;
+  }
+
+
+  
+
+
+
 
     /* #about, #contact {
       padding: 100px 50px;
@@ -282,7 +359,10 @@
     } */
   </style>
 </head>
+
 <body>
+
+
   <header id="header">
     <a href="#" class="logo">I-Lish</a>
     <ul>
@@ -302,28 +382,171 @@
     <img src="dino/foreground.png" id="fore" />
   </section>
 
-  <div class="sec">
-    <h2>Lorem ipsum dolor sit.
-    </h2><br><br><br><br><br>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit viverra libero... Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste magni quasi id? Nobis, nulla maxime facilis eos modi blanditiis ipsam aliquid deserunt at non officia quae beatae laboriosam accusamus quod, reiciendis, doloremque molestiae. Aliquid quisquam velit a excepturi unde repellendus ipsum quas possimus adipisci commodi sapiente nobis corrupti autem nihil, molestiae nemo temporibus in veritatis dolores vero sunt. Ducimus illo saepe voluptatibus hic soluta nobis molestiae obcaecati similique dicta. Ut id pariatur officiis obcaecati. Voluptas alias tempore error iste hic vero architecto earum accusantium excepturi assumenda quia autem accusamus sint at, nihil totam praesentium aliquam provident quas non iusto maiores odit repellat optio. Eum pariatur minima assumenda ab amet excepturi nulla ea aliquam accusantium libero. Laboriosam quidem exercitationem maxime optio, suscipit ex deserunt nesciunt vero ducimus expedita quis minima magnam necessitatibus fuga numquam harum neque quas porro et reiciendis quaerat rerum temporibus! Quasi explicabo nulla et distinctio vitae quisquam nihil id laudantium tempora numquam error expedita asperiores tenetur, ab dolore commodi rem obcaecati reprehenderit delectus labore perferendis. Molestiae sapiente, culpa quae facere minus veniam enim temporibus praesentium at totam iusto nesciunt harum nemo voluptatum non dolorum? Dolorum quas blanditiis iure libero provident cupiditate dolore voluptate. Aut doloremque a atque placeat quaerat. Accusamus laudantium odit quas, ipsa quae beatae voluptatibus quam impedit, maiores cupiditate quos harum aspernatur vitae excepturi? Ipsum sunt dolores iure quasi eum ipsa in quam amet. Nam et labore similique vero ea quas quia, doloribus, suscipit totam, ex sed quisquam asperiores possimus. Ipsam maiores voluptate quo? Totam, odit?
-    </p>
-  </div>
-
-  <!-- Courses Section -->
-  <section id="courses">
-    <h2>Our Popular Courses</h2>
-    <div class="course-cards">
-      <div class="card">
-        <h3>Spoken English</h3>
-        <p>Master English speaking skills through interactive activities and daily conversation practice.</p>
-      </div>
-      <div class="card">
-        <h3>Phonics & Reading</h3>
-        <p>Learn to read and pronounce clearly using fun phonics techniques and engaging story sessions.</p>
-      </div>
+  <!-- About Section -->
+  <section id="about"
+    style="background: #b6d440; padding: 100px 80px; display: flex; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap;">
+    <div style="flex: 1; display: flex; justify-content: center; margin-top: -600px;">
+      <img src="dino/hello.png" alt="About I-Lish" style="width: 600px; max-width: 800px; object-fit: contain;" />
+    </div>
+    <div
+      style="flex: 1.2; background-color: #292727; padding: 40px 35px; border-radius: 70px 10px 70px 10px ;  box-shadow: 0 10px 30px rgba(190, 183, 183, 0.3); border: 4px solid #c64040;">
+      <h2 style="color: #b6d440; font-size: 3.0em; margin-bottom: 25px;">About I-Lish</h2>
+      <p style="color: #f0f0f0; font-size: 1.5em; line-height: 1.2;">
+        At I-LISH, we believe that language is more than just words — it's the key to confidence, connection, and
+        success.
+        <br><br>
+        With years of experience in language training, we specialize in delivering high-impact English learning programs
+        tailored for all age groups.
+        <br><br>
+        Whether you're just beginning your journey or looking to refine your communication skills, our expert-led
+        courses ensure that learning English is simple, effective, and fun.
+      </p>
     </div>
   </section>
+
+
+
+<!-- Courses Section -->
+<style>
+  .course-card {
+    text-align: center;
+    width: 260px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .course-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  .card-content {
+    background: white;
+    border-radius: 20px;
+    padding: 70px 15px 25px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .card-image {
+    width: 80px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+</style>
+
+<section id="courses" style="background-color: #b6d440; padding: 70px 20px 90px 20px;">
+  <h2 style="
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-family: 'Luckiest Guy', cursive;
+    margin-bottom: 70px;
+    color: white;
+  ">
+    <span style="color: white;">Our Most</span>
+    <span style="color: #f24822;">Popular</span>
+    <span style="color: white;">Courses</span>
+  </h2>
+
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+
+    <!-- Spoken English -->
+    <div class="course-card">
+      <img src="dino/spoken.png" alt="Spoken English" class="card-image" />
+      <div class="card-content">
+        <h3 style="font-size: 1.4rem; color: #2d2d2d; margin-bottom: 10px;">Spoken English</h3>
+        <p style="font-size: 1rem; color: #555;">Build fluency and speak with clarity and confidence.</p>
+      </div>
+    </div>
+
+    <!-- Phonics -->
+    <div class="course-card">
+      <img src="dino/phonics.png" alt="Phonics" class="card-image" />
+      <div class="card-content">
+        <h3 style="font-size: 1.4rem; color: #2d2d2d; margin-bottom: 10px;">Phonics</h3>
+        <p style="font-size: 1rem; color: #555;">Perfect for young learners to build reading and pronunciation skills.</p>
+      </div>
+    </div>
+
+    <!-- Reading -->
+    <div class="course-card">
+      <img src="dino/reading.png" alt="Reading" class="card-image" />
+      <div class="card-content">
+        <h3 style="font-size: 1.4rem; color: #2d2d2d; margin-bottom: 10px;">Reading</h3>
+        <p style="font-size: 1rem; color: #555;">Improve comprehension, vocabulary, and fluency for growth.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ✨ Contact Us Section -->
+<section id="contact" style="background: radial-gradient(circle at top left, #b6d440); padding: 100px 20px;">
+  <div class="contact-box slide-up" style="
+    max-width: 900px;
+    margin: auto;
+    background: #fff9e6;
+    padding: 60px 40px;
+    border-radius: 35px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  ">
+    <!-- Floating Icon -->
+    <img src="dino/hello.png" alt="hello" style="
+      position: absolute;
+      top: -90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+    " />
+
+    <h2 style="
+      font-size: 3rem;
+      color: #f24822;
+      font-family: 'Luckiest Guy', cursive;
+      margin-bottom: 20px;
+      margin-top: 60px;
+    ">
+      Let's Talk!
+    </h2>
+
+    <p style="font-size: 1.2rem; color: #333; margin-bottom: 25px;">
+      Have questions? Ready to get started?<br><strong>We’re just a message away!</strong>
+    </p>
+
+    <p style="font-size: 1.1rem; color: #444;">
+      📞 <strong>Call or WhatsApp Us:</strong><br>
+      <a href="https://wa.me/911234567890" style="color: #f24822; text-decoration: none;">+91-12345 67890</a>
+    </p>
+
+    <p style="font-size: 1.1rem; color: #444; margin-top: 20px;">
+      ⏰ <strong>Timings:</strong><br>
+      Monday – Saturday<br>
+      10:00 AM – 6:00 PM
+    </p>
+
+    <a href="https://wa.me/911234567890" class="contact-btn">
+      📩 Message Us on WhatsApp
+    </a>
+  </div>
+</section>
+
+
+
+
+</section>
+
 
   <!-- About Section -->
   <!-- <section id="about">
@@ -361,5 +584,19 @@
       header.style.transform = `translateY(${value * 0.2}px)`;
     });
   </script>
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".slide-up");
+  hiddenElements.forEach(el => observer.observe(el));
+</script>
+
 </body>
+
 </html>
